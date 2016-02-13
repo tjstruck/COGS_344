@@ -9,7 +9,7 @@ dt = 0.01;
 y(1) = y0;
 i = 1;
 
-[avg_acc, avg_r_time] = simulate_manyDecisions_A03(A, c, y0, z, T0, dt, y, i, N)
+[avg_acc, avg_r_time] = simulate_manyDecisions_A03(A, c, y0, z, T0, dt, y, i, N);
 
-%disp(['Reaction Time = ' num2str(dt*i)])
-%disp(['The threashold that was crossed was ' num2str(z*sign(y(i)))])
+disp(['Average Accuracy ' num2str(avg_acc)])
+disp(['Average Reaction Time = ' num2str(avg_r_time)])

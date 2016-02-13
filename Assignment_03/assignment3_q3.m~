@@ -27,6 +27,7 @@ RT = DT + T0;
 
 disp(['The Predicted Accuracy = ' num2str(1-ER)])
 disp(['The Average Simulated Accuracy For This Run = ' num2str(avg_acc)])
+disp(new)
 disp(['The Predicted Reaction Time = ' num2str(RT)])
 disp(['The Average Simulated Reaction Time For This Run = ' num2str(avg_r_time)])
 disp(['The absolute difference between the predicted and the simulation = ' num2str(abs(avg_r_time-RT))])

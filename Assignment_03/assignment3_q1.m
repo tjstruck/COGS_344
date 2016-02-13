@@ -17,5 +17,5 @@ while (y(i) < z) & (y(i) > -z)
     i = i + 1;
 end
 
-disp(['Reaction Time = ' num2str(dt*i)])
+disp(['Reaction Time = ' num2str(T0+dt*i)])
 disp(['The threashold that was crossed was ' num2str(z*sign(y(i)))])
