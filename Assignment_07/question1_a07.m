@@ -10,7 +10,7 @@ xlabel('Bias (b)')
 ylabel('Probability of One Heads')
 %xlim([0.5 0.8])
 set(gca, 'fontsize', 12)
-saveas(figure(1),'fig1_question1_A07_probability_one_head.pdf')
+saveas(figure(1),'question1_fig1_A07_probability_one_head.pdf')
 
 figure(1); clf; hold on;
 plot(b,p_t)
@@ -18,7 +18,7 @@ xlabel('Bias (b)')
 ylabel('Probability of One Tails')
 %xlim([0.5 0.8])
 set(gca, 'fontsize', 12)
-saveas(figure(1),'fig2_question1_A07_probability_one_tail.pdf')
+saveas(figure(1),'question1_fig2_A07_probability_one_tail.pdf')
 
 p_17h = b.^17;
 p_8t = (1-b).^8;
@@ -31,7 +31,7 @@ xlabel('Bias (b)')
 ylabel('Probability of 17 Heads and 8 Tails')
 %xlim([0.5 0.8])
 set(gca, 'fontsize', 12)
-saveas(figure(1),'fig3_question1_A07_probability_17_heads_8_tails.pdf')
+saveas(figure(1),'question1_fig3_A07_probability_17_heads_8_tails.pdf')
 
 
 uniform_posterior = (p_17h_8t.*(1/length(b)))./sum(p_17h_8t)
@@ -42,7 +42,7 @@ xlabel('Bias (b)')
 ylabel('Uniform Posterior Probability')
 %xlim([0.5 0.8])
 set(gca, 'fontsize', 12)
-saveas(figure(1),'fig4_question1_A07_uniform_posterior.pdf')
+saveas(figure(1),'question1_fig4_A07_uniform_posterior.pdf')
 
 
 h_b1 = [1:-0.002:0.002]
@@ -59,7 +59,7 @@ xlabel('Bias (b)')
 ylabel('Hermione Prior Probability')
 %xlim([0.5 0.8])
 set(gca, 'fontsize', 12)
-saveas(figure(1),'fig5_question1_A07_hermione_prior.pdf')
+saveas(figure(1),'question1_fig5_A07_hermione_prior.pdf')
 
 
 
@@ -69,7 +69,7 @@ xlabel('Bias (b)')
 ylabel('Hermione Posterior Probability')
 %xlim([0.5 0.8])
 set(gca, 'fontsize', 12)
-saveas(figure(1),'fig6_question1_A07_hermione_posterior.pdf')
+saveas(figure(1),'question1_fig6_A07_hermione_posterior.pdf')
 
 
 
