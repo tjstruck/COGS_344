@@ -28,7 +28,7 @@ xlabel('Bias')
 ylabel('Posterior Probability Bias')
 %ylim([0, 1e-2])
 set(gca, 'fontsize', 12)
-saveas(figure(2),'question1_fig1_A07_prosterior_heads.pdf')
+saveas(figure(2),'question1_fig2_A07_prosterior_heads.pdf')
 
 d = [1,1,1,0,1,0,1,1,1,0,1,1,1,0,0,1,0,1,1,1,0,0,1,1,1];
 
@@ -64,26 +64,44 @@ xlabel('Bias')
 ylabel('Posterior Probability Bias')
 %ylim([0, 1e-2])
 set(gca, 'ydir', 'normal')
-saveas(figure(4),'question1_fig3_A07_posterior_over_time.pdf')
+saveas(figure(4),'question1_fig4_A07_imagecs_posterior_over_time.pdf')
 
 for t = 1:25
     mew(t) = sum(post(:,t).*b(:));
 end
 
 
+p_reward = 0.5;%probability of reward
+p_no_rward = 1 - p_reward;%probability of no reward
+T = 25;%trials
+
+for t = 1:T
+    if rand(1) <= p_reward
+        r(t) = 1;
+    else
+        r(t) = 0;
+    end
+    V(t) = sum(r)/t;
+end
+
+
 figure(5); clf; hold on;
 plot(mew)
+plot(V)
 xlabel('Bias')
 ylabel('Posterior Probability Bias')
+legend('Baysian Average Overtime', 'Brute force reward')
 %ylim([0, 1e-2])
 set(gca, 'fontsize', 12)
-saveas(figure(5),'question1_fig3_A07_posterior_over_time.pdf')
+saveas(figure(5),'question1_fig5_A07_mean_posterior_over_time.pdf')
 
 
+%the difference if that the brute force mean should end up being around 0.5
+%, aka similar chance to a fair coin, after many trials but it is random so 
+%it takes many trials (original was 100 trials.
 
-
-
-
-
+%The Baysian prior's mean will always evolve in the same way since the data
+%is set to a specific outcome and will end up at the same mean after X 
+%number of trials everytime it is simulated.
 
 

@@ -94,27 +94,3 @@ avg_spell_b_damage = mean(spell_b_damage);
 disp(['Spell A does ', num2str(avg_spell_a_damage), ' on average'])
 disp(['Spell B does ', num2str(avg_spell_b_damage), ' on average'])
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
