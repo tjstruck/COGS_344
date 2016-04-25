@@ -61,8 +61,8 @@ end
 
 
 figure(2); clf; hold on;
-% plot(beta, likeliehood)
-% plot(beta, LL)
+plot(beta, likeliehood)
+plot(beta, LL)
 for i = 1:24
     plot(beta_fit(i), func(beta_fit(i)),'.','markers',14)
 end
@@ -145,7 +145,7 @@ xlabel('Blink Rate')
 ylabel('Probability Risk')
 %ylim([0, 2e-4])
 set(gca, 'fontsize', 12)
-saveas(figure(6),'question9_fig6_beta_vs_blink_rate.pdf')
+saveas(figure(6),'question9_fig6_be.pdf')
 
 
 
